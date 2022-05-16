@@ -4,40 +4,49 @@ import java.util.Scanner ;
 
 class Main {
   public static void main(String[] args) {
-    Scanner entrada = new Scanner (System.in);
-    
+Scanner entrada= new Scanner (System.in);
     int aleatorio = (int) (Math.random()*100);
-   boolean acertou = false  ;
-    int tentativas = 0;
-      int usuario =0;
-    System.out.println("\n Vamosjogar : \n Escolha um numero de 1 a 1000 \n Boa Sorte ");
+    int x =0;
+    int tentativas =0 ;
+    boolean acertou = false;
+       System.out.println("\n Vamosjogar : \n Escolha um numero de 1 a 100 \n Boa Sorte ");
     
-  while(tentativas <5){
-    System.out.println(" Escolha um numero ");
-    usuario  = entrada.nextInt();
-    if(usuario + 1 == aleatorio ||
-      usuario - 1 == aleatorio){
-      System.out.println("Ta quente ");
-      }else if (usuario < aleatorio){
-      System.out.println("Ta frio \n O numero  e maior ");
-      }else if (usuario>aleatorio){
-      System.out.println("ta frio \n O numeor  e menor ");
+    while(tentativas<5){
+
+System.out.print("Escolha um numero ");
+      x= entrada.nextInt();
+
+
+      if(x + 1== aleatorio||
+        x -1 == aleatorio ){
+        System.out.println("Ta quente ");
+        }
+      if(x>aleatorio){
+        System.out.println(" O numero e menor");
+      }else if (x<aleatorio){
+        System.out.println("O numeor e maior ");
       }
-    if(usuario == aleatorio){
-      tentativas = 5;
-     acertou = true ;
-
-    }
-
-    tentativas ++;
-
+   if(x==aleatorio){
+    tentativas = 5;
+  acertou = true;
+     
+   }
 
     
-  }
+     }
+tentativas ++;
+
+      
+   if(acertou){
+  System.out.print("Ganhou ");
+}else{
+    System.out.print("Perdeu \n Falta conhecimento e odio \n o numeoro era  " + aleatorio);
+  
+}
+
+  
+
     
-    System.out.println("Perdeu \n O numero era " + aleatorio );
-
-
 
     
   }
