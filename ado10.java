@@ -32,9 +32,9 @@ System.out.print("Escolha um numero ");
      
    }
 
-    
+    tentativas ++;
      }
-tentativas ++;
+
 
       
    if(acertou){
